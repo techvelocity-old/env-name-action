@@ -1,0 +1,18 @@
+name: "env-name-action"
+description: "Generate a valid name for your environment"
+author: "Velocity"
+inputs:
+  max:
+    required: true
+    description: "maximum characters to use"
+    default: "40"
+  pattern:
+    required: true
+    description: "an ability to control the prefix and suffix. Use {name} as a placeholder for the name."
+    default: "{name}"
+outputs:
+  name:
+    description: "The generated environment name"
+runs:
+  using: "node12"
+  main: "dist/index.js"
