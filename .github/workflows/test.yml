@@ -4,7 +4,6 @@ on: # rebuild any PRs and main branch changes
   push:
     branches:
       - main
-      - "test/refs"
       - "releases/*"
 
 jobs:
@@ -14,6 +13,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: npm install
       - run: npm run prepare
+      - run: npm test
   test: # validate the action does what it meant to do
     runs-on: ubuntu-latest
     steps:
