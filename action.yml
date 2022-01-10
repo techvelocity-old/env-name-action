@@ -14,5 +14,5 @@ outputs:
   name:
     description: "The generated environment name"
 runs:
-  using: "node12"
+  using: "node16"
   main: "dist/index.js"
